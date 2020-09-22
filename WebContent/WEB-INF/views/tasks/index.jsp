@@ -5,15 +5,15 @@
         <h2>タスク一覧</h2>
         <ul>
             <c:forEach var="task" items="${tasks}">
-                <li> 
-	                <a href="${pageContext.request.contextPath}/show?id={task.id}">
-	                    <c:out value="${task.id}" />
-	                </a>
-	                :<c:out value="${task.content}" />
+                <li>
+                    <a href="${pageContext.request.contextPath}/show?id=${task.id}">
+                        <c:out value="${task.id}" />
+                    </a>
+                    :<c:out value="${task.content}" />
                 </li>
             </c:forEach>
         </ul>
-        
+
         <p><a href="${pageContext.request.contextPath}/new">新規タスクの追加</a></p>
         <%-- 「<p><a href="<c:url value='/new' />">新規タスクの追加</a></p>」でも可 --%>
     </c:param>
