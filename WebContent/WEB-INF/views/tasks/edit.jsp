@@ -3,9 +3,9 @@
 
 <c:import url="../layout/app.jsp">
     <c:param name="content">
-        <h2>タスク新規追加ページ</h2>
+        <h2>id : ${task.id} のタスク編集ページ</h2>
 
-        <form method="POST" action="${pageContext.request.contextPath}/create">
+        <form method="POST" action="${pageContext.request.contextPath}/update">
             <c:import url="_form.jsp" />
         </form>
 
